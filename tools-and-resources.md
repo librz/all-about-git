@@ -1,3 +1,9 @@
+### git help
+
+Similar to Linux's `man` command, Git's CLI offers help on how to use its subcommands. Syntax is `git help <command>`, for instance to find out how to use `git restore` simply do `git help restore`.
+
+To explore git's functionalities, you can do `git help -a` and it will list all available subcommands.
+
 ### tldr
 
 `tldr` is a command line utility that can help in finding the most common usages of a command.
