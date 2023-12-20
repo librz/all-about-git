@@ -109,7 +109,7 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 
 stash changes that are not ready for commit & you may need to come back to it later
 
-git stashes are orgnized as a stack
+git stashes are organized as a **stack** which is FILO(First In Last Out)
 
 - stash changes(tracked files only): `git stash`
 - stash changes in tracked files & give it a message: `git stash push -m "to be continue: feature blabla"`
