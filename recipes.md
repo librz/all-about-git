@@ -94,8 +94,8 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 When merging, there are 3 scenarios:
 
 1. Fast forword. e.g. Branch B are based on branch A, there were some new commits made on branch B, A stays unchanged, when merge B into A, A will just fast forward to latest commit on B.
-2. Branch diverged but no conflicts. e.g. 
-3. Branch diverged & has conflicts. e.g.
+2. Branch diverged but no conflicts. In this case, a new merged will be generated, this commit will have 2 parent commits(the latest commit on both branches).
+3. Branch diverged & has conflicts. In this case, you'll have to manually resolve merge conflicts, after resolved, you need to manually make a new commit.
 
 - merge another branch into current branch: `git merge {branch}`
 
