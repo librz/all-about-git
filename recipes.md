@@ -64,7 +64,7 @@
 
 sometimes, when you do `git status` or `git pull`, git tells you `your local branch has diverged with remote`, usually it means the `HEAD` of your local barnch & remote branch is different (having different commit IDs). If you want to forfeit your local `HEAD`, you could just do `git reset --hard {remote}/{branch}`. [More details](https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches)
 
-### branching
+### branch management
 
 - switch branch `git checkout {branch}` or `git switch {branch}` (note: git switch is a relatively new command, available in git v2.32(release in 2019-08-16) or above)
 
@@ -75,10 +75,6 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 - delete local branch: `git branch -D {branch}`
 
 - delete remote branch: `git push {remote} --delete {branch}`
-
-- merge another branch into current branch: `git merge {branch}`
-
-- merge remote branch into current local branch: `git merge {remote}/{branch}`
 
 - rename current branch: `git branch -m {new name}`
 
@@ -92,6 +88,20 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 - add: `git remote add {remote_name} {url}`
 - remove: `git remote remove {remote_name}`
 - change url: `git remote set-url {remote_name} {url}`
+
+### merge
+
+- merge another branch into current branch: `git merge {branch}`
+
+- merge remote branch into current local branch: `git merge {remote}/{branch}`
+
+### cherry pick
+
+Cherry pick allows u to pick only certain commit(s) and apply changes introduced by them. For each picked commit, a new commit(same diff, same commit message but new commit id) will be generated.
+
+- cherry pick single commit: `git cherry-pick {commit id}`
+- cherry pick multiple commits: `git cherry-pick {commit_id_1} {commit_id_2} {commit_id_3}`
+- cherry pick multiple **successive** commits: `git cherry-pick {start_commit_id}^..{end_commit_id}` (by default start commit is not included, append `^` to include it)
 
 ### history navigation
 
