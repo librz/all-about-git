@@ -70,15 +70,15 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 
 - start a new branch based on head of current branch: `git checkout -b {branch}` or `git switch -c {branch}`
 
-- start a new branch based on commit whose commit id is 021b1e39: `git checkout -b {branch} 021b1e39`
+- start a new branch based on certain commit: `git checkout -b {branch} {commit_id}`
 
 - delete local branch: `git branch -D {branch}`
 
 - delete remote branch: `git push {remote} --delete {branch}`
 
-- merge current branch with another local branch: `git merge {branch}`
+- merge another branch into current branch: `git merge {branch}`
 
-- merge current branch with remote branch: `git merge {remote}/{branch}`
+- merge remote branch into current local branch: `git merge {remote}/{branch}`
 
 - rename current branch: `git branch -m {new name}`
 
@@ -95,7 +95,7 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 
 ### history navigation
 
-- `git checkout 021b1e39`
+- `git checkout {commit_id}`
 
 ### rewrite history
 
