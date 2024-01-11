@@ -4,7 +4,7 @@ When merging, there are 3 scenarios:
 
 1. Fast forword. 
 2. Branch diverged but no conflicts.
-3. Branch diverged & has conflicts. In this case, you'll have to manually resolve merge conflicts, after resolved, you need to manually make a new commit.
+3. Branch diverged & has conflicts. In this case, you'll have to manually resolve merge conflicts, after resolved, you need to manually make a new merge commit.
 
 Fast forword is simple, it simply means fast forword to a later commit. e.g. Branch B are based on branch A, there were some new commits made on branch B, A stays unchanged, when merge B into A, A will just fast forward to latest commit on B.
 
