@@ -1,8 +1,8 @@
 ### init
 
-- `git init {{ foldername }}` (foldername is optional, by default it's the current directory)
+- `git init {folder}` (folder is optional, by default it's the current directory)
 
-- `git clone {{ url }}` (url protocol could be ssh, git, http[s] or ftp[s]. example of url using git protocol: `git@github.com:librz/shell-scripts.git`)
+- `git clone {url}` (url protocol could be ssh/git/http[s]/ftp[s]. e.g.: `git@github.com:librz/shell-scripts.git`)
 
 ### basic inspection
 
@@ -91,6 +91,12 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 
 ### merge
 
+When merging, there are 3 scenarios:
+
+1. Fast forword. e.g. Branch B are based on branch A, there were some new commits made on branch B, A stays unchanged, when merge B into A, A will just fast forward to latest commit on B.
+2. Branch diverged but no conflicts. e.g. 
+3. Branch diverged & has conflicts. e.g.
+
 - merge another branch into current branch: `git merge {branch}`
 
 - merge remote branch into current local branch: `git merge {remote}/{branch}`
@@ -145,6 +151,3 @@ git stashes are organized as a **stack** which is FILO(First In Last Out)
 - list all files tracked by git: `git ls-tree --full-tree --name-only -r {commit}`
 - tell git to stop traking file: `git rm --cached {file}`
 - tell git to stop tracking folder & files under it: `git rm -r --cached {folder}`
-
----
-
