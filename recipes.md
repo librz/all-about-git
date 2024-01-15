@@ -18,20 +18,6 @@
 
 - `git show-ref --heads` print all
 
-### diff
-
-- `git diff` by default, git diff without any option or parameter shows diff between working tree & HEAD (`git diff HEAD`)
-
-- `git diff --cached` show diff between staging area & HEAD
-
-- `git diff --shortstat {{commit id}}` (the --shortstat shows only number of changed files as well as added & deleted lines)
-
-- `git diff b77bfd22 e67337d4` diff between commit `b77bfd22` and `e67337d4`
-
-- `git diff e67337d4 e67337d4~` diff between commit `e67337d4` and it's parent commit (`~` sign means parent)
-
-Note: `git diff {commit_a} {commit_b}` & `git diff {commit_b} {commit_a}` are 
-
 ### stage & commit
 
 - stage(track) files/folders: `git add file1.js folder1`
