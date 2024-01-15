@@ -16,7 +16,11 @@
 
 - `git log --oneline -n10 --decorate --graph`
 
-- `git diff` by default, git diff without any option or parameter shows diff between working tree & HEAD
+- `git show-ref --heads` print all
+
+### diff
+
+- `git diff` by default, git diff without any option or parameter shows diff between working tree & HEAD (`git diff HEAD`)
 
 - `git diff --cached` show diff between staging area & HEAD
 
@@ -26,7 +30,7 @@
 
 - `git diff e67337d4 e67337d4~` diff between commit `e67337d4` and it's parent commit (`~` sign means parent)
 
-- `git show-ref --heads` print all 
+Note: `git diff {commit_a} {commit_b}` & `git diff {commit_b} {commit_a}` are 
 
 ### stage & commit
 
