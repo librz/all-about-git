@@ -28,7 +28,7 @@ In step 2 & 3, `main` & `feature/style` diverged. In step 4, we merge and a merg
 
 In the above example, although 2 branches diverged but both were making changes to different files(on `main` branch, `index.html` changed; on `feature/style`, `index.css` changed). Naturally, there are no conflicts.
 
-What if the diverged commits on both branches were touching the same file? Well, there might be conflicts!
+What if the diverged commits on both branches were touching the same file? Well, there *might* be conflicts!
 
 When there are conflicts, git will inform us by printing something like `Automatic merge failed; fix conflicts and then commit the result.`. Git will also use conflict markers to mark conflict areas in conflicted files, e.g.
 
@@ -40,5 +40,6 @@ console.log('goodbye');
 >>>>>>> feature/new-console-log
 ```
 
+In this case, change introduced by current branch is `console.log('hello');`, by the other branch is `console.log('goodbye');`. We can choose which change we want to accept, or even accept both changes, once this is decided, we can edit the file, remove conflict markers, add file to staging area & commit.
 
-
+[git conflict markers](https://stackoverflow.com/questions/7901864/git-conflict-markers)
