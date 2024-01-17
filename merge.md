@@ -22,10 +22,10 @@ Say we have 2 branches: `main` & `feature/style`, `feature/style` is based on `m
 
 <img width="619" alt="Screenshot 2024-01-11 at 16 17 10" src="https://github.com/librz/all-about-git/assets/50607948/d240b2f2-1855-4b8f-aae0-af5411094ce2">
 
-In step 2 & 3, `main` & `feature/style` diverged. In step 4, we merge by generate a merge commit.
+In step 2 & 3, `main` & `feature/style` diverged. In step 4, we merge and a merge commit is generated.
 
 ### Conflicts
 
-In the above example, although 2 branches diverged but both were making changes to different files(on `main` branch, `index.html` changed; on `feature/style`, `index.css` changed). In this case, there are no conflicts.
+In the above example, although 2 branches diverged but both were making changes to different files(on `main` branch, `index.html` changed; on `feature/style`, `index.css` changed). Naturally, there are no conflicts.
 
-But what if the diverged commits on both branches were making changes to the same file? Well, there will be conflicts & we have to manually resolve them.
+What if the diverged commits on both branches were touching the same file? Well, there will be conflicts & we have to manually resolve them.
