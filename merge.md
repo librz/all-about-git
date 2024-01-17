@@ -28,4 +28,6 @@ In step 2 & 3, `main` & `feature/style` diverged. In step 4, we merge and a merg
 
 In the above example, although 2 branches diverged but both were making changes to different files(on `main` branch, `index.html` changed; on `feature/style`, `index.css` changed). Naturally, there are no conflicts.
 
-What if the diverged commits on both branches were touching the same file? Well, there will be conflicts & we have to manually resolve them.
+What if the diverged commits on both branches were touching the same file? Well, there might be conflicts!
+
+When git tells us there are conflicts, we'll have to resolve them manually.
