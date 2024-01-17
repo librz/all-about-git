@@ -30,4 +30,15 @@ In the above example, although 2 branches diverged but both were making changes 
 
 What if the diverged commits on both branches were touching the same file? Well, there might be conflicts!
 
-When git tells us there are conflicts, we'll have to resolve them manually.
+When there are conflicts, git will inform us by printing something like `Automatic merge failed; fix conflicts and then commit the result.`. Git will also use conflict markers to mark conflict areas in conflicted files, e.g.
+
+```
+<<<<<<< HEAD
+console.log('hello');
+=======
+console.log('goodbye');
+>>>>>>> feature/new-console-log
+```
+
+
+
