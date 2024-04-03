@@ -138,6 +138,7 @@ git stashes are organized as a **stack** which is FILO(First In Last Out)
 
 ### miscellaneous
 
+- list out contributors, order by commits count: `git shortlog -s -n`
 - list all files tracked by git: `git ls-tree --full-tree --name-only -r {commit}`
 - tell git to stop traking file: `git rm --cached {file}`
 - tell git to stop tracking folder & files under it: `git rm -r --cached {folder}`
