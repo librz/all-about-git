@@ -58,7 +58,7 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 
 - switch branch `git checkout {branch}` or `git switch {branch}` (note: git switch is a relatively new command, available in git v2.32(release in 2019-08-16) or above)
 
-- start a new branch based on head of current branch: `git checkout -b {branch}` or `git switch -c {branch}`
+- start a new branch based on head of current branch: `git checkout -b {branch}` or `git switch -c {branch}`(`-c` is short for `--create`)
 
 - start a new branch based on certain commit: `git checkout -b {branch} {commit_id}`
 
