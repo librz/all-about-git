@@ -45,4 +45,4 @@ This way, commit history is very clean.
 
 Normally, commits history is *generated* as you commit. `rebase` let's u *edit* it. This is kind of like black magic.
 
-U **should not** rebase commits that u have pushed to public repo.
+U **should not** rebase commits that u have pushed to public repo, that way u'll have to force push which causes confusion for other people.
