@@ -41,11 +41,17 @@ c7a1522
 
 This way, commit history is very clean.
 
+Fun fact: rebase doesn't care when the commits are made, in the above case, `5544060` may had been committed after `c7a1522` & `e4ec41f`
+
 ### caution
 
 Normally, commits history is *generated* as you commit. `rebase` let's u *edit* it. This is kind of like black magic.
 
-U **should not** rebase commits that u have pushed to public repo, that way u'll have to force push which causes confusion for other people.
+If u are working with other people, u **should not** rebase commits that u have pushed to public branch, that way u'll have to force push which irratates people.
 
 
 [git cherry pick vs rebase](https://stackoverflow.com/questions/11835948/git-cherry-pick-vs-rebase)
+
+### tldr git rebase
+
+<img width="967" src="https://github.com/librz/all-about-git/assets/50607948/55d5310c-227c-4a50-8666-973cf3f975d7">
