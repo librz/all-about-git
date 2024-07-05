@@ -49,8 +49,16 @@ Normally, commits history is *generated* as you commit. `rebase` let's u *edit* 
 
 If u are working with other people, u **should not** rebase commits that u have pushed to public branch, that way u'll have to force push which irratates people.
 
+### cherry-pick vs rebase
 
 [git cherry pick vs rebase](https://stackoverflow.com/questions/11835948/git-cherry-pick-vs-rebase)
+
+### favouring base/working branch when rebasing
+
+- favouring base branch: `git rebase -X ours base_branch`
+- favouring current working branch: : `git rebase -X theirs base_branch`
+
+Here, ours/theirs has reversed meaning in the context of rebase.
 
 ### tldr git rebase
 
