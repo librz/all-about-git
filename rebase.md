@@ -60,6 +60,11 @@ If u are working with other people, u **should not** rebase commits that u have 
 
 Here, ours/theirs has reversed meaning in the context of rebase.
 
+### config git pull using rebase(when remote & local branches have diverged)
+
+<img width="643" alt="Screenshot 2024-07-10 at 11 38 02" src="https://github.com/librz/all-about-git/assets/50607948/20d3e72a-ce5d-4707-9fc7-0e1f5ef9c164">
+
+
 ### tldr git rebase
 
 <img width="967" src="https://github.com/librz/all-about-git/assets/50607948/55d5310c-227c-4a50-8666-973cf3f975d7">
