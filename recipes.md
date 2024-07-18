@@ -30,6 +30,8 @@
 
 - commit changes in staging area: `git commit -m 'update readme'`
 
+- commit changes without running pre-commit hooks: `git commit --no-verify -m "commit message"`
+
 - commit with not only a message but also detailed description: [stackoverflow question](https://stackoverflow.com/questions/16122234/how-to-commit-a-change-with-both-message-and-description-from-the-command-li)
 
 - unstage all changes (moving changes from staging area to working tree): `git reset HEAD` or `git restore --staged .` (note git restore is only available after v2.23)
