@@ -16,7 +16,7 @@ Normally, you'd want to do diff according to commit timeline: `git diff {older_c
 #### advanced options
 
 - `--shortstat`:  shows only number of changed files as well as added & deleted lines
-- exlude certain file(s): `git diff HEAD~1 HEAD ':(exclude)package-lock.json'`
+- exlude certain file(s): `git diff HEAD~1 HEAD ':(exclude)package-lock.json'`. For details, refer to [stackoverflow](https://stackoverflow.com/questions/10415100/exclude-file-from-git-diff)
 
 #### about tilder(~) syntax
 
