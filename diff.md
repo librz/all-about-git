@@ -1,6 +1,6 @@
 #### basic usage
 
-- `git diff`: by default, git diff without any parameter shows *unstaged* changes
+- `git diff`: by default, git diff(without any option) shows *unstaged* changes
 - `git diff --staged`: show *staged* changes, u can also do `git diff --cached`
 - `git diff HEAD`: show *all uncommitted* changes(whether it's staged or not)
 - `git diff {commit_id}` diff working tree & a specific commit
