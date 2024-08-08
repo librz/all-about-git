@@ -1,10 +1,14 @@
 ### git help
 
-Similar to Linux's `man` command, Git's CLI offers help on how to use its subcommands. Syntax is `git help <command>`, for instance to find out how to use `git restore` simply do `git help restore`.
+Similar to Linux's `man` command, Git's CLI offers help on how to use its subcommands. Syntax is `git help <command>`, 
 
-To explore git's functionalities, you can do `git help -a` and it will list all available subcommands.
+e.g. `git help restore`
 
-Alternatively, you can use `git <command> -h` syntax, e.g. `git archive -h`
+U can do `git help -a` and it will list all available subcommands.
+
+Alternatively, you can use `git <command> -h` syntax, it's more concise.
+
+e.g. `git archive -h`
 
 ### tldr
 
