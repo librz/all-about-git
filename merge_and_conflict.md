@@ -47,3 +47,15 @@ console.log('goodbye');
 In this case, change introduced by current branch is `console.log('hello');`, by the other branch is `console.log('goodbye');`. We can choose which change we want to accept, or even accept both changes, once this is decided, we can edit the file, remove conflict markers, add file to staging area & commit.
 
 [git conflict markers](https://stackoverflow.com/questions/7901864/git-conflict-markers)
+
+### Merge strategy
+
+```sh
+# accept all incoming changes
+git merge -X theirs {branch_name}
+
+# accept all our changes
+git merge -X ours {branch_name}
+```
+
+see: https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull
