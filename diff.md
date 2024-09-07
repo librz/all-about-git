@@ -1,11 +1,11 @@
-#### basic usage
+#### Basic usage
 
 - `git diff`: by default, git diff(without any option) shows *unstaged* changes
 - `git diff --staged`: show *staged* changes, u can also do `git diff --cached`
 - `git diff HEAD`: show *all uncommitted* changes(whether it's staged or not)
 - `git diff {commit_id}` diff working tree & a specific commit
 
-#### diff between commits
+#### Diff between commits
 
 `git diff {commit_a} {commit_b}`
 
@@ -13,12 +13,13 @@ Note: the order of commit id matters, the above command basically says: compared
 
 Normally, you'd want to do diff according to commit timeline: `git diff {older_commit_id} {newer_commit_id}`
 
-#### advanced options
+#### Advanced options
 
 - `--shortstat`:  shows only number of changed files as well as added & deleted lines
+- `-- {file_path}`: diff specific file
 - exlude certain file(s): `git diff HEAD~1 HEAD ':(exclude)package-lock.json'`. For details, refer to [stackoverflow](https://stackoverflow.com/questions/10415100/exclude-file-from-git-diff)
 
-#### about tilder(~) syntax
+#### About tilder(~) syntax
 
 The `~` postfix means ancestor, by default it's parent commit. 
 
