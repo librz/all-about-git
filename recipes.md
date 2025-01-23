@@ -115,22 +115,6 @@ Cherry pick allows u to pick only certain commit(s) and apply changes introduced
 - delete commits but keep the changes in working directory: `git reset --soft {{commit id}}` or `git reset --soft HEAD~{{count}}` (I think you can emit the `--soft` as it's default behavior)
 - push to remote branch after history is rewritten: `git push -f` (note: -f is dangerous especially when there are other team members who work on the same branch, only do this if the commit you are rewriting is already pushed to remote branch & no other team member is working on that remote branch)
 
-### stash
-
-stash changes that are not ready for commit & you may need to come back to it later
-
-git stashes are organized as a **stack** which is FILO(First In Last Out)
-
-- stash changes(tracked files only): `git stash`
-- stash changes in tracked files & give it a message: `git stash -m "to be continue: feature blabla"`
-- stash changes(including untracked files): `git stash -u` or `git stash --include-untracked`
-- list all stashes: `git stash list`
-- apply/drop specific stash: `git stash apply/drop stash@{index}`
-- apply lastest stash: `git stash apply`
-- pop latest stash: `git stash pop`, not only apply the stash but also pop out the latest stash from the stack
-- drop all stashes: `git stash clear`
-- show changes in a stash: `git stash show stash@{index}`
-
 ### tagging
 
 - list all tags: `git tag`
