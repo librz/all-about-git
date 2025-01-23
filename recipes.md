@@ -122,11 +122,12 @@ stash changes that are not ready for commit & you may need to come back to it la
 git stashes are organized as a **stack** which is FILO(First In Last Out)
 
 - stash changes(tracked files only): `git stash`
-- stash changes in tracked files & give it a message: `git stash push -m "to be continue: feature blabla"`
+- stash changes in tracked files & give it a message: `git stash -m "to be continue: feature blabla"`
 - stash changes(including untracked files): `git stash -u` or `git stash --include-untracked`
 - list all stashes: `git stash list`
-- apply latest stash: `git stash pop` or `git stash apply`
 - apply/drop specific stash: `git stash apply/drop stash@{index}`
+- apply lastest stash: `git stash apply`
+- pop latest stash: `git stash pop`, not only apply the stash but also pop out the latest stash from the stack
 - drop all stashes: `git stash clear`
 - show changes in a stash: `git stash show stash@{index}`
 
