@@ -22,7 +22,7 @@
 
 - stage(track) files/folders: `git add file1.js folder1`
 
-- stage all changes(tracked & untracked files): `git add .` or `git add -A`
+- stage all changes(tracked & untracked files): `git add .` or `git add -A` (`git add .` stages all changes under current directory and sub-directories, `git add -A` or `git add --all` stages all changes throughout the entire repo)
 
 - stage updates to tracked files: `git add -u`
 
