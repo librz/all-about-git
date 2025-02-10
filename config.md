@@ -13,10 +13,14 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	default = current
 	autoSetupRemote = true
 [alias]
+	st = status
+	br = branch
+	lp = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>'
 	fo = fetch origin
 	cm = commit -m
-	ca = commit --amend
-	lp = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>'
+	ca = coomit --amend
+	sl = stash list
+	sa = stash apply
 ```
 
 under current folder, a folder name `.git` stores all things related to git. inside it a file named `config` stores local git config
