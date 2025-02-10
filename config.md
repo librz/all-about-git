@@ -9,6 +9,9 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 [core]
 	# force git to be case sensitive (which it by default is not under macOS)
 	ignoreCase = false
+[fetch]
+	# Auto rm remote-tracking refs that no longer exist on the remote
+	prune = true
 [push]
 	default = current
 	autoSetupRemote = true
