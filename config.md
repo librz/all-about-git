@@ -9,9 +9,14 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 [core]
 	# force git to be case sensitive (which it by default is not under macOS)
 	ignoreCase = false
+[push]
+	default = current
+	autoSetupRemote = true
 [alias]
 	fo = fetch origin
-	fu = fetch upstream
+	cm = commit -m
+	ca = commit --amend
+	lp = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>'
 ```
 
 under current folder, a folder name `.git` stores all things related to git. inside it a file named `config` stores local git config
