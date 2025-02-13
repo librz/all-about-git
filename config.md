@@ -22,8 +22,11 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	fo = fetch origin
 	cm = commit -m
 	ca = coomit --amend
+	# stash relted
 	sl = stash list
 	sa = stash apply
+	sp = stash pop
+	sm = stash -m
 ```
 
 under current folder, a folder name `.git` stores all things related to git. inside it a file named `config` stores local git config
