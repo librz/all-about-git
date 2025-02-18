@@ -20,16 +20,18 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	sort = -committerdate
 [alias]
 	st = status
-	br = branch
 	lp = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>'
 	fo = fetch origin
 	cm = commit -m
 	ca = coomit --amend
-	# stash relted
+	# stash related
 	sl = stash list
 	sa = stash apply
 	sp = stash pop
 	sm = stash -m
+	# list br sort by commit date(newest comes first)
+	# list out last commit date, commit id, branch name(highlight current br) & relative commit date
+	br = for-each-ref --sort=-committerdate refs/heads/ --format=\"%(committerdate:short) %(color:red)%(objectname:short) %(if)%(HEAD)%(then)%(color:cyan)* %(else)%(color:yellow)%(end)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))\"
 ```
 
 under current folder, a folder name `.git` stores all things related to git. inside it a file named `config` stores local git config
