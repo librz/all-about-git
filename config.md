@@ -15,6 +15,9 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 [push]
 	default = current
 	autoSetupRemote = true
+[branch]
+	# sort by commit date (newest first)
+	sort = -committerdate
 [alias]
 	st = status
 	br = branch
