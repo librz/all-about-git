@@ -15,9 +15,6 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 [push]
 	default = current
 	autoSetupRemote = true
-[branch]
-	# sort by commit date (newest first)
-	sort = -committerdate
 [alias]
 	st = status
 	lp = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>'
