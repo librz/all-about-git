@@ -19,6 +19,8 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	st = status
 	lp = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>'
 	fo = fetch origin
+
+	# commit related
 	cm = commit -m
 	ca = commit --amend
 
@@ -28,9 +30,12 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	sp = stash pop
 	sm = stash -m
 
-	# list br sort by commit date(newest comes first)
+	# list brance sort by commit date(newest comes first)
 	# list out last commit date, commit id, branch name(highlight current br) & relative commit date
 	br = for-each-ref --sort=-committerdate refs/heads/ --format=\"%(committerdate:short) %(color:red)%(objectname:short) %(if)%(HEAD)%(then)%(color:cyan)* %(else)%(color:yellow)%(end)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))\"
+
+	# list out all aliases (the exclamation mark in Git aliaes tells Git to run command as shell command rather than a Git subcommand)
+	alias = ! git config -l | grep -E "^alias"
 ```
 
 under current folder, a folder name `.git` stores all things related to git. inside it a file named `config` stores local git config
