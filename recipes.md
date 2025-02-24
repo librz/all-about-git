@@ -60,11 +60,13 @@ sometimes, when you do `git status` or `git pull`, git tells you `your local bra
 
 - switch branch `git checkout {branch}` or `git switch {branch}` (note: git switch is a relatively new command, available in git v2.32(release in 2019-08-16) or above)
 
-- start a new branch based on head of current branch: `git checkout -b {branch}` or `git switch -c {branch}`(`-c` is short for `--create`)
+- switch to a new branch based on current branch: `git checkout -b {branch}` or `git switch -c {branch}`(`-c` is short for `--create`)
 
-- start a new branch based on certain commit: `git checkout -b {branch} {commit_id}`
+- create a backup branch based on current branch: `git branch {branch}`
 
-- delete local branch: `git branch -D {branch}`
+- switch to a new branch based on certain commit: `git checkout -b {branch} {commit_id}`
+
+- delete local branch: `git branch -d|--delete {branch}` or `git branch -D {branch}` to forcefully delete
 
 - delete remote branch: `git push {remote} --delete {branch}`
 
