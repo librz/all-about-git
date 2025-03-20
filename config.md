@@ -2,13 +2,10 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 
 ```git
 [user]
-	name = john
-	email = john1996@gmail.com
+	name = Patrick Ren
+	email = 193862497+lib-patrick@users.noreply.github.com
 [init]
 	defaultBranch = main
-[core]
-	# force git to be case sensitive (useful for macOS)
-	ignoreCase = false
 [fetch]
 	# Auto rm remote-tracking refs that no longer exist on the remote
 	prune = true
@@ -16,10 +13,16 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	default = current
 	autoSetupRemote = true
 [alias]
-	st = status
-	lp = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>'
-	fo = fetch origin
+	# list out all aliases (`!` runs normal shell commands)
+	la = ! git config -l | grep -E "^alias"
 
+  # common
+	st = status
+  sw = switch
+	pl = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>' # pretty log. see: https://git-scm.com/docs/pretty-formats
+  dac = ! git clean -df && git restore . # discard all changes (discard untracked files & dirs, changes in working dir)
+  pick = cherry-pick  # pick commit(s)
+	
 	# commit related
 	cm = commit -m
 	ca = commit --amend
@@ -30,12 +33,21 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	sp = stash pop
 	sm = stash -m
 
-	# list branch sort by commit date(newest comes first)
-	# list out last commit date/commit id/branch name(highlight current branch)/relative commit date
-	br = for-each-ref --sort=-committerdate refs/heads/ --format=\"%(committerdate:short) %(color:red)%(objectname:short) %(if)%(HEAD)%(then)%(color:cyan)* %(else)%(color:yellow)%(end)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))\"
+  # restore related
+  r = restore # discard changes in working directory
+  rs = restore --staged  # unstage file(s)
 
-	# list out all aliases ( `!` runs normal shell commands)
-	alias = ! git config -l | grep -E "^alias"
+  # diff related
+  d = diff # diff with changes working directory
+  ds = diff --staged # diff with staged changes 
+  dst = diff --stat
+
+  # branch related
+  br = for-each-ref refs/heads/ \
+       --sort=-committerdate \
+       --format=\"%(committerdate:short) %(color:red)%(objectname:short) %(if)%(HEAD)%(then)%(color:cyan)* %(else)%(color:yellow)%(end)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))\"
+
+
 ```
 
 under current folder, a folder name `.git` stores all things related to git. inside it a file named `config` stores local git config
