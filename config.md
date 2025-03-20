@@ -2,8 +2,8 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 
 ```git
 [user]
-	name = John Melrose
-	email = john@gmai.com
+	name = Patrick Ren 🚀
+	email = patrick@gmai.com
 [init]
 	defaultBranch = main
 [fetch]
