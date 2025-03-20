@@ -15,12 +15,13 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 [alias]
 	# list out all aliases (`!` runs normal shell commands)
 	la = ! git config -l | grep -E "^alias"
+
 	# common
 	st = status
   	sw = switch
 	pl = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>' # pretty log. see: https://git-scm.com/docs/pretty-formats
-  dac = ! git clean -df && git restore . # discard all changes (discard untracked files & dirs, changes in working dir)
-  pick = cherry-pick  # pick commit(s)
+	dac = ! git clean -df && git restore . # discard all changes (discard untracked files & dirs, changes in working dir)
+	pick = cherry-pick  # pick commit(s)
 
 	# commit related
 	cm = commit -m
@@ -42,8 +43,7 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	dst = diff --stat
 
 	# branch related
-	br = for-each-ref refs/heads/ \
-       --sort=-committerdate \
+	br = for-each-ref refs/heads/ --sort=-committerdate \
        --format=\"%(committerdate:short) %(color:red)%(objectname:short) %(if)%(HEAD)%(then)%(color:cyan)* %(else)%(color:yellow)%(end)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))\"
 ```
 
