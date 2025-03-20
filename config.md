@@ -19,7 +19,7 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	# common
 	st = status
   	sw = switch
-	pl = log --pretty='%Cgreen%h %Creset%ae %ar %C(cyan)<%s>' # pretty log. see: https://git-scm.com/docs/pretty-formats
+	pl = log --pretty='%Cgreen%h %Creset%an %ar %C(cyan)<%s>' # pretty log. see: https://git-scm.com/docs/pretty-formats
 	dac = ! git clean -df && git restore . # discard all changes (discard untracked files & dirs, changes in working dir)
 	pick = cherry-pick  # pick commit(s)
 
