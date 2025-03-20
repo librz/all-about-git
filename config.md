@@ -34,7 +34,7 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	# list out last commit date/commit id/branch name(highlight current branch)/relative commit date
 	br = for-each-ref --sort=-committerdate refs/heads/ --format=\"%(committerdate:short) %(color:red)%(objectname:short) %(if)%(HEAD)%(then)%(color:cyan)* %(else)%(color:yellow)%(end)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))\"
 
-	# list out all aliases (the exclamation mark `!` in Git aliaes tells Git to run command as shell command rather than a Git subcommand)
+	# list out all aliases ( `!` runs normal shell commands)
 	alias = ! git config -l | grep -E "^alias"
 ```
 
