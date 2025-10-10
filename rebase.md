@@ -4,8 +4,8 @@
 
 U can use `git rebase -i {commit_hash}` to edit commits, by doing this, u can:
 
-1. change commit message
-2. squash multiple commits into one
+1. change commit message (using `reword` or simply `r`)
+2. squash multiple commits into one (using `squash` or simply `s`)
 3. reorder commits (not recommended)
 4. delete commits (not recommeded, u should use revert)
 
