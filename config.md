@@ -21,7 +21,8 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
   	sw = switch
 	pl = log --pretty='%Cgreen%h %Creset%an %ar %C(cyan)<%s>' # pretty log. see: https://git-scm.com/docs/pretty-formats
 	dac = ! git clean -df && git restore . # discard all changes (discard untracked files & dirs, changes in working dir)
-	pick = cherry-pick  # pick commit(s)
+	pr = pull --rebase # if local & remote branch diverged, rebase instead of generating a merge commit
+	pf = push --force-with-lease # safer altenative to --force
 
 	# commit related
 	cm = commit -m
