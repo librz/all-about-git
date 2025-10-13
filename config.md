@@ -9,6 +9,8 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 [fetch]
 	# Auto rm remote-tracking refs that no longer exist on the remote
 	prune = true
+[pull]
+	rebase = true
 [push]
 	default = current
 	autoSetupRemote = true
