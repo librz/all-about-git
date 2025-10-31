@@ -2,8 +2,8 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 
 ```git
 [user]
-	name = Patrick Ren 🚀
-	email = patrick@gmai.com
+	name = Your Name
+	email = xyz@example.com
 [init]
 	defaultBranch = main
 [fetch]
@@ -17,12 +17,19 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 [alias]
 	# list out all aliases (`!` runs normal shell commands)
 	la = ! git config -l | grep -E "^alias"
+  # list out all branches
+  lb = for-each-ref refs/heads/ --sort=-committerdate \
+       --format=\"%(committerdate:short) %(color:red)%(objectname:short) %(if)%(HEAD)%(then)%(color:cyan)* %(else)%(color:yellow)%(end)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))\"
+  # list out commits (pretty log)
+	lc = log --pretty='%Cgreen%h %Creset%an %ar %C(cyan)<%s>' # pretty log. see: https://git-scm.com/docs/pretty-formats
 
-	# common
+  # common
 	st = status
   	sw = switch
-	pl = log --pretty='%Cgreen%h %Creset%an %ar %C(cyan)<%s>' # pretty log. see: https://git-scm.com/docs/pretty-formats
-	dac = ! git clean -df && git restore . # discard all changes (discard untracked files & dirs, changes in working dir)
+	br = branch
+  	ds = diff --stat
+  	wt = worktree
+  	dac = ! git clean -df && git restore . # discard all changes (not including staged changes)
 	pr = pull --rebase # if local & remote branch diverged, rebase instead of generating a merge commit
 	pf = push --force-with-lease # safer altenative to --force
 
@@ -35,19 +42,6 @@ under `$HOME` folder, a file named `.gitconfig` stores global git configs, here'
 	sa = stash apply
 	sp = stash pop
 	sm = stash -m
-
-	# restore related
-	r = restore # discard changes in working directory
-	rs = restore --staged  # unstage file(s)
-
-	# diff related
-	d = diff # diff with changes working directory
-	ds = diff --staged # diff with staged changes 
-	dst = diff --stat
-
-	# branch related
-	br = for-each-ref refs/heads/ --sort=-committerdate \
-       --format=\"%(committerdate:short) %(color:red)%(objectname:short) %(if)%(HEAD)%(then)%(color:cyan)* %(else)%(color:yellow)%(end)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))\"
 ```
 
 under current folder, a folder name `.git` stores all things related to git. inside it a file named `config` stores local git config
