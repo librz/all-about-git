@@ -2,9 +2,9 @@
 
 When merging, there are 3 scenarios:
 
-1. Fast forword. 
-2. Branch diverged but no conflicts.
-3. Branch diverged & has conflicts. In this case, you'll have to manually resolve merge conflicts, after resolved, you need to manually make a new merge commit.
+1. Fast forword
+2. Branch diverged but no conflicts
+3. Branch diverged & has conflicts. In this case, you'll have to manually resolve merge conflicts, after resolved, you need to manually make a new merge commit
 
 Fast forword is simple, it simply means fast forword to a later commit. e.g. Branch B are based on branch A, there were some new commits made on branch B, A stays unchanged, when merge B into A, A will just fast forward to latest commit on B.
 
@@ -44,9 +44,11 @@ console.log('goodbye');
 >>>>>>> feature/new-console-log
 ```
 
-In this case, change introduced by current branch is `console.log('hello');`, by the other branch is `console.log('goodbye');`. We can choose which change we want to accept, or even accept both changes, once this is decided, we can edit the file, remove conflict markers, add file to staging area & commit.
+In this case, change introduced by current branch is `console.log('hello');`, by the other branch is `console.log('goodbye');`. We can choose which change we want to accept, or accept both changes, once this is decided, we can edit the file, remove conflict markers, add file to staging area & commit.
 
 [git conflict markers](https://stackoverflow.com/questions/7901864/git-conflict-markers)
+
+FYI: there might be conflicts even if the changes are identical
 
 ### Merge strategy
 
@@ -59,3 +61,6 @@ git merge -X ours {branch_name}
 ```
 
 see: https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull
+
+
+
