@@ -29,6 +29,10 @@
   	dac = ! git clean -df && git restore . # discard all changes (not including staged changes)
 	pr = pull --rebase # if local & remote branch diverged, rebase instead of generating a merge commit
 	pf = push --force-with-lease # safer altenative to --force
+	temp = "!f() { \
+		local name=\"temp-$(date +'%b%d-%H%M' | tr '[:upper:]' '[:lower:]')\"; \
+        git switch -c \"$name\"; \
+    }; f"
 
 	# commit related
 	cm = commit -m
