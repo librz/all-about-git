@@ -21,6 +21,7 @@
 	lc = log --pretty='%Cgreen%h %Creset%an %ar %C(cyan)<%s>' # pretty log. see: https://git-scm.com/docs/pretty-formats
 
   # common
+	fo = fetch origin
 	st = status
   	sw = switch
 	br = branch
