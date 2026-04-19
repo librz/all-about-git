@@ -25,9 +25,9 @@
 	st = status
 	sw = switch
 	br = branch
-  	ds = diff --stat
-  	wt = worktree
-  	dac = ! git clean -df && git restore . # discard all changes (not including staged changes)
+	ds = diff --stat
+	wt = worktree
+	dac = ! git clean -df && git restore . # discard all changes (not including staged changes)
 	pr = pull --rebase # if local & remote branch diverged, rebase instead of generating a merge commit
 	pf = push --force-with-lease # safer altenative to --force
 	temp = "!f() { \
