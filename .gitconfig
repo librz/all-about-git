@@ -23,7 +23,7 @@
   # common
 	fo = fetch origin
 	st = status
-  	sw = switch
+	sw = switch
 	br = branch
   	ds = diff --stat
   	wt = worktree
