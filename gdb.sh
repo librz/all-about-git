@@ -144,7 +144,3 @@ function gdb () {
 	echo
 	echo "DONE"
 }
-
-		}
-	'
-}
