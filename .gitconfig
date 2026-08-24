@@ -44,3 +44,7 @@
 	sa = stash apply
 	sp = stash pop
 	sm = stash -m
+
+# Use the personal SSH key for any repository under ~/personal/
+[includeIf "gitdir:~/personal/"]
+	path = ~/.gitconfig-personal
